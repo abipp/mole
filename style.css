@@ -1,0 +1,83 @@
+body {
+  background-color: rgb(255, 206, 8);
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: Arial;
+}
+
+h2 {
+  width: 70px;
+  height: 70px;
+  background-color: #fbef07;
+  border-radius: 6px;
+  font-size: 60px;
+  margin: 20px auto;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.mulai {
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: whitesmoke;
+  background-color: rgb(255, 0, 60);
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #f9e506;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+
+.mulai:hover {
+  box-shadow: inset 300px 0 0 0 #f9e506;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(img/palu.png), auto;
+}
+
+.container:active {
+  cursor: url(img/palu2.png), auto;
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(img/tikus.png) bottom center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 100px;
+  transition: 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: 0;
+}
